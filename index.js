@@ -3,3 +3,11 @@ async function getCategories(){
     let data = await response.json()
     return data
 }
+
+function getOneCategory(category){
+    return `<div class="category"> </div>`
+}
+
+getCategories().then(categories => {
+
+})
