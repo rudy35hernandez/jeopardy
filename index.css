@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgreen;
+}
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 20%);
+    /* border: solid 2px black */
+    height: 100vh
+}
+
+.categories *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 0.1rem solid black;
+}
+
+.category{
+    display: grid;
+    grid-row-start: 1;
+    border: solid 1px;
+}
+
+.player-clue-100{
+    grid-row-start: 2;
+    border: solid 1px
+}
+
+.player-clue-200{
+    grid-row-start: 3;
+    border: solid 1px
+
+}
+
+.player-clue-300{
+    grid-row-start: 4;
+    border: solid 1px
+
+}
+
+.player-clue-400{
+    grid-row-start: 5;
+    border: solid 1px;
+    border-bottom: solid 2px;
+
+}
