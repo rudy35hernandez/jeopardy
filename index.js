@@ -1,18 +1,22 @@
 
 
-async function getCategories() {
-    let response = await fetch("https://jservice.io/api/categories?count=4&offset=4")
+async function getCategories(count, offset) {
+    let response = await fetch(`https://jservice.io/api/categories?count=${count}&offset=${offset}`)
     let data = await response.json()
     return data
     
 }
 
+function getClueHtml(clueValue){
+    return `<div class="player-clue-100"> $100 </div>`
+}
+
 function getOneCategory(category){
     return `<div class="category"> ${category.title} </div>
-            <div class="player-clue-100"> $100 </div>
-            <div class="player-clue-200"> $200 </div>
-            <div class="player-clue-300"> $300 </div>
-            <div class="player-clue-400"> $400 </div>
+            <div class="my-category-clue" style="grid-row-start: 2"> $100 </div>
+            <div class="my-category-clue" style="grid-row-start: 3"> $200 </div>
+            <div class="my-category-clue" style="grid-row-start: 4"> $300 </div>
+            <div class="my-category-clue" style="grid-row-start: 5"> $400 </div>
     `
 }
 
