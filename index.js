@@ -8,15 +8,15 @@ async function getCategories(count, offset) {
 }
 
 function getClueHtml(clueValue){
-    return `<div class="player-clue-100"> $100 </div>`
+    return `<div class="my-category-clue" style="grid-row-start: ${clueValue / 100 + 1}"> $${clueValue} </div>`
 }
 
 function getOneCategory(category){
     return `<div class="category"> ${category.title} </div>
-            <div class="my-category-clue" style="grid-row-start: 2"> $100 </div>
-            <div class="my-category-clue" style="grid-row-start: 3"> $200 </div>
-            <div class="my-category-clue" style="grid-row-start: 4"> $300 </div>
-            <div class="my-category-clue" style="grid-row-start: 5"> $400 </div>
+            ${getClueHtml(100)}
+            ${getClueHtml(200)}
+            ${getClueHtml(300)}
+            ${getClueHtml(400)}
     `
 }
 
